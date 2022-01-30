@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_30_104651) do
+ActiveRecord::Schema.define(version: 2022_01_30_123640) do
 
   create_table "articles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_104651) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "excerpt"
     t.string "location"
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_104651) do
   create_table "profiles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "name"
-    t.date "birthdat"
+    t.date "birthdate"
     t.text "bio"
     t.string "color"
     t.string "twitter"
@@ -60,10 +60,11 @@ ActiveRecord::Schema.define(version: 2022_01_30_104651) do
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email"
-    t.string "password"
+    t.string "hashed_password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "articles", "users"
   add_foreign_key "profiles", "users"
 end
