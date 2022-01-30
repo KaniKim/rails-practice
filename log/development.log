@@ -300,3 +300,527 @@ Migrating to CreatePlaces (20220130030142)
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateArticles (20220130100131)
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE `articles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220130100131')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-01-30 10:04:29.644994', '2022-01-30 10:04:29.644994')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateArticles (20220130100131)
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE `articles`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20220130100131'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateArticles (20220130100549)
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE `articles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` text, `published_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220130100549')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/articles" for ::1 at 2022-01-30 19:06:29 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1630)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 19427)
+Completed 200 OK in 31ms (Views: 25.1ms | ActiveRecord: 0.7ms | Allocations: 23232)
+
+
+Started GET "/articles/new" for ::1 at 2022-01-30 19:06:30 +0900
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 12.7ms | Allocations: 5220)
+  Rendered articles/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 5628)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 9209)
+Completed 200 OK in 35ms (Views: 20.6ms | ActiveRecord: 4.9ms | Allocations: 13954)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddExcerptAndLocationToArticles (20220130100717)
+  [1m[35m (3.4ms)[0m  [1m[35mALTER TABLE `articles` ADD `excerpt` varchar(255)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE `articles` ADD `location` varchar(255)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220130100717')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/articles/new" for ::1 at 2022-01-30 19:08:49 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2369)
+
+
+  
+SyntaxError (/Users/kanikim/rails-practice/app/models/article.rb:2: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...dates :title, :body, presence :true
+...                              ^
+):
+  
+app/models/article.rb:2: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/article.rb:2: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/article.rb:2: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/controllers/articles_controller.rb:15:in `new'
+Started GET "/articles/new" for ::1 at 2022-01-30 19:12:17 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 4.6ms | Allocations: 5137)
+  Rendered articles/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 5772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 12572)
+Completed 200 OK in 25ms (Views: 15.2ms | ActiveRecord: 1.5ms | Allocations: 21540)
+
+
+Started POST "/articles" for ::1 at 2022-01-30 19:12:19 +0900
+Processing by ArticlesController#create as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"", "body"=>"", "published_at(1i)"=>"2022", "published_at(2i)"=>"1", "published_at(3i)"=>"30", "published_at(4i)"=>"10", "published_at(5i)"=>"12"}, "commit"=>"Create Article"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 9.0ms | Allocations: 4423)
+  Rendered articles/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4544)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 8034)
+Completed 422 Unprocessable Entity in 25ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 9837)
+
+
+Started POST "/articles" for ::1 at 2022-01-30 19:12:20 +0900
+Processing by ArticlesController#create as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"", "body"=>"", "published_at(1i)"=>"2022", "published_at(2i)"=>"1", "published_at(3i)"=>"30", "published_at(4i)"=>"10", "published_at(5i)"=>"12"}, "commit"=>"Create Article"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 10.1ms | Allocations: 4190)
+  Rendered articles/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 4303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 7673)
+Completed 422 Unprocessable Entity in 24ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 8885)
+
+
+Started POST "/articles" for ::1 at 2022-01-30 19:12:23 +0900
+Processing by ArticlesController#create as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"", "body"=>"", "published_at(1i)"=>"2022", "published_at(2i)"=>"1", "published_at(3i)"=>"30", "published_at(4i)"=>"10", "published_at(5i)"=>"12"}, "commit"=>"Create Article"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 44.2ms | Allocations: 4190)
+  Rendered articles/new.html.erb within layouts/application (Duration: 44.5ms | Allocations: 4303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 7686)
+Completed 422 Unprocessable Entity in 66ms (Views: 48.6ms | ActiveRecord: 0.0ms | Allocations: 8894)
+
+
+Started GET "/articles/new" for ::1 at 2022-01-30 19:12:44 +0900
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.7ms | Allocations: 2440)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2553)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5988)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 6403)
+
+
+Started GET "/articles/new" for ::1 at 2022-01-30 19:12:45 +0900
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.4ms | Allocations: 2436)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2549)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5997)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 6410)
+
+
+Started GET "/articles/" for ::1 at 2022-01-30 19:12:46 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4708)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 1.7ms | Allocations: 5323)
+
+
+Started GET "/articles/new" for ::1 at 2022-01-30 19:12:47 +0900
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.2ms | Allocations: 2436)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2549)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 5982)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 6387)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/articles/new" for ::1 at 2022-01-30 19:13:14 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 4.6ms | Allocations: 5137)
+  Rendered articles/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 5772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 12572)
+Completed 200 OK in 22ms (Views: 13.2ms | ActiveRecord: 1.6ms | Allocations: 21516)
+
+
+Started GET "/articles/new" for ::1 at 2022-01-30 19:14:10 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.7ms | Allocations: 5626)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 6257)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 13058)
+Completed 200 OK in 19ms (Views: 10.5ms | ActiveRecord: 1.6ms | Allocations: 21924)
+
+
+Started POST "/articles" for ::1 at 2022-01-30 19:14:13 +0900
+Processing by ArticlesController#create as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"", "location"=>"", "excerpt"=>"", "body"=>"", "published_at(1i)"=>"2022", "published_at(2i)"=>"1", "published_at(3i)"=>"30", "published_at(4i)"=>"10", "published_at(5i)"=>"14"}, "commit"=>"Create Article"}
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:27:in `block in create'
+  [1m[36mArticle Create (1.9ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `published_at`, `created_at`, `updated_at`, `excerpt`, `location`) VALUES ('', '', '2022-01-30 10:14:00', '2022-01-30 10:14:13.837912', '2022-01-30 10:14:13.837912', '', '')[0m
+  ↳ app/controllers/articles_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/articles/1
+Completed 200 OK in 15ms (ActiveRecord: 5.6ms | Allocations: 4048)
+
+
+Started GET "/articles/1" for ::1 at 2022-01-30 19:14:13 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:63:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 457)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 4049)
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 1.2ms | Allocations: 6295)
+
+
+Started GET "/articles/new" for ::1 at 2022-01-30 19:14:15 +0900
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 10.0ms | Allocations: 2875)
+  Rendered articles/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2996)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 6431)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 6886)
+
+
+Started GET "/articles/new" for ::1 at 2022-01-30 19:14:15 +0900
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 17.9ms | Allocations: 2790)
+  Rendered articles/new.html.erb within layouts/application (Duration: 18.1ms | Allocations: 2903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 6345)
+Completed 200 OK in 34ms (Views: 28.8ms | ActiveRecord: 0.0ms | Allocations: 6751)
+
+
+Started GET "/articles/new" for ::1 at 2022-01-30 19:14:50 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.8ms | Allocations: 5625)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 6260)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 13060)
+Completed 200 OK in 19ms (Views: 10.5ms | ActiveRecord: 1.6ms | Allocations: 22028)
+
+
+Started POST "/articles" for ::1 at 2022-01-30 19:14:52 +0900
+Processing by ArticlesController#create as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"", "location"=>"", "excerpt"=>"", "body"=>"", "published_at(1i)"=>"2022", "published_at(2i)"=>"1", "published_at(3i)"=>"30", "published_at(4i)"=>"10", "published_at(5i)"=>"14"}, "commit"=>"Create Article"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 10.3ms | Allocations: 4797)
+  Rendered articles/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4918)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 8410)
+Completed 422 Unprocessable Entity in 28ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 10274)
+
+
+Started POST "/articles" for ::1 at 2022-01-30 19:14:53 +0900
+Processing by ArticlesController#create as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"", "location"=>"", "excerpt"=>"", "body"=>"", "published_at(1i)"=>"2022", "published_at(2i)"=>"1", "published_at(3i)"=>"30", "published_at(4i)"=>"10", "published_at(5i)"=>"14"}, "commit"=>"Create Article"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 10.9ms | Allocations: 4560)
+  Rendered articles/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 4673)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 8043)
+Completed 422 Unprocessable Entity in 26ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 9293)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (3.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS `users`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `users` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `articles` CASCADE[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE `articles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` text, `published_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, `excerpt` varchar(255), `location` varchar(255)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20220130100717)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20220130100549);
+
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-01-30 10:17:10.634857', '2022-01-30 10:17:10.634857')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('schema_sha1', '7844e06180777b48739b0654c03095df1c56231a', '2022-01-30 10:17:10.638502', '2022-01-30 10:17:10.638502')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.9ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `published_at`, `created_at`, `updated_at`) VALUES ('RailsConf', 'RailsConf is the official gathering for Rails developers..', '2020-01-31 00:00:00', '2022-01-30 10:19:43.852281', '2022-01-30 10:19:43.852281')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `published_at`, `created_at`, `updated_at`) VALUES ('Introduction to SQL', 'SQL stands for Structured Query Language, ..', '2022-01-30 10:21:11', '2022-01-30 10:21:19.676947', '2022-01-30 10:21:19.676947')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `published_at`, `created_at`, `updated_at`) VALUES ('RubyConf 2020', 'The annual RubyConf will take place in..', '2020-01-31 00:00:00', '2022-01-30 10:21:58.467632', '2022-01-30 10:21:58.467632')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` ASC LIMIT 1[0m
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` DESC LIMIT 1[0m
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`title` = 'RailsConf' ORDER BY `articles`.`id` ASC LIMIT 1[0m
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`title` = 'RailsConf'[0m
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` DESC LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Destroy (0.6ms)[0m  [1m[31mDELETE FROM `articles` WHERE `articles`.`id` = 3[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` /* loading for inspect */ LIMIT 11[0m
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` /* loading for inspect */ LIMIT 11[0m
+  [1m[36mArticle Destroy (1.6ms)[0m  [1m[31mDELETE FROM `articles` WHERE (published_at < '2011-01-01')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `published_at`, `created_at`, `updated_at`) VALUES ('Advanced Active Record', 'Models need to relate to each other. In the real world, ...', '2022-01-30 00:00:00', '2022-01-30 10:27:17.151764', '2022-01-30 10:27:17.151764')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20220130102909)
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255), `password` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220130102909')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProfiles (20220130102950)
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE `profiles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint NOT NULL, `name` varchar(255), `birthdat` date, `bio` text, `color` varchar(255), `twitter` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_profiles_on_user_id` (`user_id`), CONSTRAINT `fk_rails_e424190865`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220130102950')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password`, `created_at`, `updated_at`) VALUES ('user@example.com', 'secret', '2022-01-30 10:31:29.342771', '2022-01-30 10:31:29.342771')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Create (0.5ms)[0m  [1m[32mINSERT INTO `profiles` (`user_id`, `name`, `bio`, `created_at`, `updated_at`) VALUES (1, 'John Doe', 'Ruby developer', '2022-01-30 10:32:18.120677', '2022-01-30 10:32:18.120677')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProfile Destroy (0.5ms)[0m  [1m[31mDELETE FROM `profiles` WHERE `profiles`.`id` = 1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddUserReferenceToArticles (20220130103325)
+  [1m[35m (3.8ms)[0m  [1m[35mALTER TABLE `articles` ADD `user_id` bigint NOT NULL[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE INDEX `index_articles_on_user_id` ON `articles` (`user_id`)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE `articles` ADD CONSTRAINT `fk_rails_3d31dad1cc`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddUserReferenceToArticles (20220130103325)
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE `articles` ADD `user_id` bigint NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProfiles (20220130102950)
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE `profiles`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20220130102950'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProfiles (20220130102950)
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE `profiles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint NOT NULL, `name` varchar(255), `birthdat` date, `bio` text, `color` varchar(255), `twitter` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_profiles_on_user_id` (`user_id`), CONSTRAINT `fk_rails_e424190865`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220130102950')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserReferenceToArticles (20220130103325)
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE `articles` ADD `user_id` bigint NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddUserReferenceToArticles (20220130103325)
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE `articles` ADD `user_id` bigint NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddUserReferenceToArticles (20220130103325)
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE `articles` ADD `user_id` bigint[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddUserReferenceToArticles (20220130103325)
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE `articles` ADD `user_id` bigint[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddUserReferenceToArticles (20220130103325)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220130103325')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Update (1.3ms)[0m  [1m[33mUPDATE `articles` SET `articles`.`updated_at` = '2022-01-30 10:39:49.037680', `articles`.`user_id` = 1 WHERE `articles`.`id` = 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` ASC LIMIT 1[0m
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` ASC LIMIT 1[0m
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` ASC LIMIT 1[0m
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` ASC LIMIT 1[0m
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateCategories (20220130104219)
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE `categories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220130104219')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJoinTableArticlesCategories (20220130104236)
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE `articles_categories` (`article_id` bigint NOT NULL, `category_id` bigint NOT NULL, INDEX `index_articles_categories_on_article_id_and_category_id` (`article_id`, `category_id`), INDEX `index_articles_categories_on_category_id_and_article_id` (`category_id`, `article_id`))[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220130104236')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `password`, `created_at`, `updated_at`) VALUES ('mary@example.com', 'guessit', '2022-01-30 10:44:04.819439', '2022-01-30 10:44:04.819439')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES ('Programming', '2022-01-30 10:44:52.762244', '2022-01-30 10:44:52.762244')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES ('Event', '2022-01-30 10:44:52.763648', '2022-01-30 10:44:52.763648')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES ('Travel', '2022-01-30 10:44:52.764518', '2022-01-30 10:44:52.764518')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES ('Music', '2022-01-30 10:44:52.765274', '2022-01-30 10:44:52.765274')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO `categories` (`name`, `created_at`, `updated_at`) VALUES ('TV', '2022-01-30 10:44:52.765998', '2022-01-30 10:44:52.765998')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` DESC LIMIT 1[0m
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`name` = 'Programming' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle::HABTM_Categories Create (0.5ms)[0m  [1m[32mINSERT INTO `articles_categories` (`article_id`, `category_id`) VALUES (4, 1)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `articles_categories` ON `categories`.`id` = `articles_categories`.`category_id` WHERE `articles_categories`.`article_id` = 4[0m
+  [1m[36mArticle Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `articles` INNER JOIN `articles_categories` ON `articles`.`id` = `articles_categories`.`article_id` WHERE `articles_categories`.`category_id` = 1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` INNER JOIN `articles_categories` ON `articles`.`id` = `articles_categories`.`article_id` WHERE `articles_categories`.`category_id` = 1[0m
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` INNER JOIN `articles_categories` ON `articles`.`id` = `articles_categories`.`article_id` WHERE `articles_categories`.`category_id` = 1 ORDER BY `articles`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateComments (20220130104651)
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE `comments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `article_id` int, `name` varchar(255), `email` varchar(255), `body` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220130104651')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `comments` INNER JOIN `articles` ON `comments`.`article_id` = `articles`.`id` WHERE `articles`.`user_id` = 1 LIMIT 1[0m
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 ORDER BY published_at DESC, title ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO `comments` (`article_id`, `name`, `email`, `body`, `created_at`, `updated_at`) VALUES (1, 'Guest', 'guest@example.com', 'Great article!', '2022-01-30 10:50:09.760698', '2022-01-30 10:50:09.760698')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` INNER JOIN `articles` ON `comments`.`article_id` = `articles`.`id` WHERE `articles`.`user_id` = 1 ORDER BY published_at DESC, title ASC[0m

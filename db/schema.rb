@@ -10,66 +10,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_30_030142) do
+ActiveRecord::Schema.define(version: 2022_01_30_104651) do
 
-  create_table "bonds", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "friend_id"
-    t.string "state"
+  create_table "articles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.datetime "published_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id", "friend_id"], name: "index_bonds_on_user_id_and_friend_id", unique: true
+    t.string "excerpt"
+    t.string "location"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
-  create_table "pictures", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "post_id", null: false
-    t.string "caption"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["post_id"], name: "fk_rails_13793e98fd"
+  create_table "articles_categories", id: false, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "article_id", null: false
+    t.bigint "category_id", null: false
+    t.index ["article_id", "category_id"], name: "index_articles_categories_on_article_id_and_category_id"
+    t.index ["category_id", "article_id"], name: "index_articles_categories_on_category_id_and_article_id"
   end
 
-  create_table "places", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "locale"
+  create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
-    t.string "place_type"
-    t.float "latitude"
-    t.float "longitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "posts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "thread_id"
-    t.string "postable_type", null: false
-    t.bigint "postable_id", null: false
+  create_table "comments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "article_id"
+    t.string "name"
+    t.string "email"
+    t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["postable_type", "postable_id"], name: "index_posts_on_postable"
-    t.index ["thread_id"], name: "fk_rails_79cf8a9f2a"
-    t.index ["user_id"], name: "fk_rails_5b5ddfd518"
   end
 
-  create_table "statuses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "text", null: false
+  create_table "profiles", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "name"
+    t.date "birthdat"
+    t.text "bio"
+    t.string "color"
+    t.string "twitter"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "usernmae"
-    t.string "first_name"
-    t.string "last_name"
     t.string "email"
-    t.boolean "is_public"
+    t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["usernmae"], name: "index_users_on_usernmae", unique: true
   end
 
-  add_foreign_key "pictures", "posts"
-  add_foreign_key "posts", "posts", column: "thread_id"
-  add_foreign_key "posts", "users"
+  add_foreign_key "profiles", "users"
 end
