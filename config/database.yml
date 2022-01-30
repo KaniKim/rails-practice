@@ -1,7 +1,7 @@
 default: &default
   adapter: mysql2
   encoding: utf8mb4
-  database: myapp_development
+  database: users
   username: <%= ENV.fetch("RAILS_DB_USERNAME") %>
   password: <%= ENV.fetch("RAILS_DB_PASSWORD") %>
   host: 127.0.0.1
@@ -14,5 +14,5 @@ default: &default
 
 development:
   <<: *default
-  database: myapp_development
+  database: users
 
