@@ -173,3 +173,130 @@ Migrating to CreateStatuses (20220130015830)
   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130020335)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddLatitudeAndLongitudeToModel (20220130023017)
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE `models` ADD `latitude` float(24)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddLatitudeAndLongitudeToModel (20220130023017)
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE `models` ADD `latitude` float(24)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddLatitudeAndLongitudeToModel (20220130024634)
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE `models` ADD `latitude` float(24)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130025320)
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE `places` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `locale` varchar(255), `name` varchar(255), `place_type` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX `index_table_on_latitude_and_longitude` ON `table` (`latitude`, `longitude`)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130025320)
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE `places` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `locale` varchar(255), `name` varchar(255), `place_type` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130025320)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE `places` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `locale` varchar(255), `name` varchar(255), `place_type` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130025320)
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE `places` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `locale` varchar(255), `name` varchar(255), `place_type` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130025320)
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE `places` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `locale` varchar(255), `name` varchar(255), `place_type` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130025320)
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE `places` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `locale` varchar(255), `name` varchar(255), `place_type` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX `index_places_on_latitude_and_longitude` ON `places` (`latitude`, `longitude`)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130025320)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE `places` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `locale` varchar(255), `name` varchar(255), `place_type` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('706744432770505605', 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePlaces (20220130030142)
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE `places` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `locale` varchar(255), `name` varchar(255), `place_type` varchar(255), `latitude` float(24), `longitude` float(24), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220130030142')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('706744432770505605')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
