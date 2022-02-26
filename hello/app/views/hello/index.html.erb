@@ -1,0 +1,7 @@
+<h1 class="display-4"><%= @title %></h1>
+<p><%= @msg %></p>
+<%= form_tag(controller: "hello", action: "index") do %>
+    <%= select_tag("s1", 
+        options_for_select(["windows", "macOS", "Linux"])) %>
+    <%= submit_tag("Click")%>
+<% end %>
