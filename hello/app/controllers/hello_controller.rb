@@ -1,16 +1,10 @@
 class HelloController < ApplicationController
-    
+    layout 'hello'
+
     def index
-        if request.post? then
-            @title = "Result"
-            if params["s1"] then
-                @msg = "you selected: " + params["s1"]
-            else
-                @msg = "not selected..."
-            end
-        else
-            @title = "Index"
-            @msg = "select radio button..."
-        end
+        @header = 'layout sample'
+        @footer = 'copyright Kani-Tono 2022.'
+        @title = 'New Layout'
+        @msg = 'this is sample page!'
     end
 end
