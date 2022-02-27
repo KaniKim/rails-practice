@@ -1,0 +1,32 @@
+<%= form_tag(controller: "msgboard", action: "index") do %>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <%= text_field_tag("name", "", {class: "form-control"})%>
+    </div>
+    <div class="form-group">
+        <label for="name">mail</label>
+        <%= text_field_tag("mail", "", {class:"form-control"})%>
+    </div>
+    <div class="form-group">
+        <label for="name">message</label>
+        <%= text_area_tag("msg", "", {class:"form-control"})%>
+    </div>
+    <%= submit_tag("Click", {class:"btn btn-primary"})%>
+<% end %>
+
+<table class="table mt-4">
+    <tr>
+        <th style="width:50%">message</th>
+        <th> name </th>
+        <th> mail </th>
+        <th> date </th>
+    </tr>
+    <% @msg_data.each do |key,obj| %>
+    <tr>
+        <td class="msg"><%= obj['msg'] %></td>
+        <td class="name"><%= obj['name'] %></td>
+        <td class="mail"><%= obj["mail"] %></td>
+        <td class="time"><%= Time.at(key.to_i) %></td>
+    </tr>
+    <%end%>
+</table>
