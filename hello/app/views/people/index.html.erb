@@ -1,0 +1,19 @@
+<h1 class="display-4 text-primary">People#index</h1>
+<p><%= @msg %></p>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Mail</th>
+    </tr>
+    <% @data.each do |obj| %>
+    <tr>
+        <td><%= obj.id %></td>
+        <td><%= obj.name %></td>
+        <td><%= obj.age %></td>
+        <td><%= obj.mail %></td>
+    </tr>
+    <% end %>
+</table>
+
