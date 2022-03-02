@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'people/index'
   get 'people', to: 'people#index'
   get 'people/add'
+  get 'people/edit/:id', to: 'people#edit'
+  post 'people/edit/:id', to: 'people#update'
   post 'people/add', to: 'people#create'
   get 'people/:id', to: 'people#show'
 end
