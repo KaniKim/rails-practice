@@ -7,12 +7,22 @@
         <th></th>
     </tr>
     <% @data.each do |obj| %>
-    <tr>
-        <td><%= obj.id %></td>
-        <td><a href="/people/<%= obj.id %>">
-            <%= obj.name %></a></td>
-        <td><a href='/people/edit/ <%= obj.id %>'>Edit</a></td>
+    <td><a href="/people/<%= obj.id %>">
+        <%= obj.name %></a></td>
+    <td><a href="/people/edit/<%= obj.id %>">
+        Edit</a>&nbsp;&nbsp;
+    <a href="javascript:delData(<%= obj.id %>);">
+        Delete</a></td>
     </tr>
     <% end %>
 </table>
+<script>
+function delData(num) {
+    if (confirm("このデータを削除しますか？")) {
+        document.location = "/people/delete/" + num;
+    }
+    return false;
+}
+</script>
+    
 
