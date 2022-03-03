@@ -1,0 +1,29 @@
+<h1 class="display-4 text-primary">Cards#index</h1>
+<p>現在、登録されているデータの一覧です。</p>
+<table class="table">
+    <tr>
+        <th>ID</th><th>題名</th>
+            <th>著者</th><th colspan="2"></th>
+        </tr>
+        <% @cards.each do |obj| %>
+        <tr>
+            <td width="35px"><%= obj.id %></td>
+            <td width="50%"><a href="/cards/<%= obj.id %>">
+                <%= obj.title %></a></td>
+            <td><%= obj.author %></td>
+            <td width="80px">
+                <a href="javascript:delData(
+                    <%= (obj.id.to_s + ".'".to_s + 
+                    obj.title.to_s).html_safe %>');">削除</a></td>
+    </tr>
+    <% end %>
+</table>
+<p><a href="/cards/add">
+    新しいデータを入力 &gt;&gt;</a></p>
+<script>
+function delData(id, title) {
+    if(confirm('「'+ title + '」のデータを削除しますか？')) {
+        document.location = "/cards/delete/" + id;
+    }
+}
+</script>
