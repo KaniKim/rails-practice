@@ -1,2 +1,5 @@
 <h1>Cards#edit</h1>
-<p>Find me in app/views/cards/edit.html.erb</p>
+<p>「<%= @card.title %>」の内容を編集します。</p>
+<%= form_for(@card, url: {controller: 'cards', action: 'edit', id:@card.id}) do |form|%>
+    <div class="form-group">
+    <label for="title">
